@@ -166,3 +166,4 @@ cython_debug/
 staticfiles
 mediafiles
 client/node_modules
+testmediafiles
