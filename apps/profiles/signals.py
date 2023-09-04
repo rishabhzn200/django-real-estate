@@ -8,10 +8,12 @@ logger = logging.getLogger(__name__)
 
 # Create a user's profile when a user is created using post_save signal
 
+
 @receiver(post_save, sender=AUTH_USER_MODEL)
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
         Profile.objects.create(user=instance)
+
 
 @receiver(post_save, sender=AUTH_USER_MODEL)
 def save_user_profile(sender, instance, **kwargs):
